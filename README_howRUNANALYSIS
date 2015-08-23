@@ -1,0 +1,49 @@
+How to use the script run_analysis.R
+
+We assume you have downloaded and unzipped the data to your computer:
+
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+
+Otherwise, do it now: download the dataset above, unzip and in that same directory
+install the run_analysis.R script.
+
+Open R Studio or the R GUI of your choice. Once open/ready, move to the directory
+where you have donloaded and specifically, to the place of the unzipped data, same
+place in which the script is located.
+
+In R STudio or in your R GUI, open the script and then 'source it' so it runs, thus
+reading and working on the data the way is needed. As a result you will get the
+datafile tidyData.txt:
+
+> dim(tidyData)
+[1] 180  21
+> summary(tidyData)
+   activityId    subjectId    timeBodyAccMagnitudeMean timeBodyAccMagnitudeStdDev timeGravityAccMagnitudeMean timeGravityAccMagnitudeStdDev
+ Min.   :1.0   Min.   : 1.0   Min.   :-0.9865          Min.   :-0.9865            Min.   :-0.9865             Min.   :-0.9865              
+ 1st Qu.:2.0   1st Qu.: 8.0   1st Qu.:-0.9573          1st Qu.:-0.9430            1st Qu.:-0.9573             1st Qu.:-0.9430              
+ Median :3.5   Median :15.5   Median :-0.4829          Median :-0.6074            Median :-0.4829             Median :-0.6074              
+ Mean   :3.5   Mean   :15.5   Mean   :-0.4973          Mean   :-0.5439            Mean   :-0.4973             Mean   :-0.5439              
+ 3rd Qu.:5.0   3rd Qu.:23.0   3rd Qu.:-0.0919          3rd Qu.:-0.2090            3rd Qu.:-0.0919             3rd Qu.:-0.2090              
+ Max.   :6.0   Max.   :30.0   Max.   : 0.6446          Max.   : 0.4284            Max.   : 0.6446             Max.   : 0.4284              
+ timeBodyAccJerkMagnitudeMean timeBodyAccJerkMagnitudeStdDev timeBodyGyroMagnitudeMean timeBodyGyroMagnitudeStdDev timeBodyGyroJerkMagnitudeMean
+ Min.   :-0.9928              Min.   :-0.9946                Min.   :-0.9807           Min.   :-0.9814             Min.   :-0.99732             
+ 1st Qu.:-0.9807              1st Qu.:-0.9765                1st Qu.:-0.9461           1st Qu.:-0.9476             1st Qu.:-0.98515             
+ Median :-0.8168              Median :-0.8014                Median :-0.6551           Median :-0.7420             Median :-0.86479             
+ Mean   :-0.6079              Mean   :-0.5842                Mean   :-0.5652           Mean   :-0.6304             Mean   :-0.73637             
+ 3rd Qu.:-0.2456              3rd Qu.:-0.2173                3rd Qu.:-0.2159           3rd Qu.:-0.3602             3rd Qu.:-0.51186             
+ Max.   : 0.4345              Max.   : 0.4506                Max.   : 0.4180           Max.   : 0.3000             Max.   : 0.08758             
+ timeBodyGyroJerkMagnitudeStdDev freqBodyAccMagnitudeMean freqBodyAccMagnitudeStdDev freqBodyAccJerkMagnitudeMean freqBodyAccJerkMagnitudeStdDev
+ Min.   :-0.9977                 Min.   :-0.9868          Min.   :-0.9876            Min.   :-0.9940              Min.   :-0.9944               
+ 1st Qu.:-0.9805                 1st Qu.:-0.9560          1st Qu.:-0.9452            1st Qu.:-0.9770              1st Qu.:-0.9752               
+ Median :-0.8809                 Median :-0.6703          Median :-0.6513            Median :-0.7940              Median :-0.8126               
+ Mean   :-0.7550                 Mean   :-0.5365          Mean   :-0.6210            Mean   :-0.5756              Mean   :-0.5992               
+ 3rd Qu.:-0.5767                 3rd Qu.:-0.1622          3rd Qu.:-0.3654            3rd Qu.:-0.1872              3rd Qu.:-0.2668               
+ Max.   : 0.2502                 Max.   : 0.5866          Max.   : 0.1787            Max.   : 0.5384              Max.   : 0.3163               
+ freqBodyGyroMagnitudeMean freqBodyGyroMagnitudeStdDev freqBodyGyroJerkMagnitudeMean freqBodyGyroJerkMagnitudeStdDev             activityType
+ Min.   :-0.9865           Min.   :-0.9815             Min.   :-0.9976               Min.   :-0.9976                 LAYING            :30   
+ 1st Qu.:-0.9616           1st Qu.:-0.9488             1st Qu.:-0.9813               1st Qu.:-0.9802                 SITTING           :30   
+ Median :-0.7657           Median :-0.7727             Median :-0.8779               Median :-0.8941                 STANDING          :30   
+ Mean   :-0.6671           Mean   :-0.6723             Mean   :-0.7564               Mean   :-0.7715                 WALKING           :30   
+ 3rd Qu.:-0.4087           3rd Qu.:-0.4277             3rd Qu.:-0.5831               3rd Qu.:-0.6081                 WALKING_DOWNSTAIRS:30   
+ Max.   : 0.2040           Max.   : 0.2367             Max.   : 0.1466               Max.   : 0.2878                 WALKING_UPSTAIRS  :30   
+> 
